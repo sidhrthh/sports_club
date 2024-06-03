@@ -2,18 +2,16 @@
 
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
-import SearchItem from "./SearchItem";
 
 function Navlinks() {
   return (
     <>
-      <ul className="flex flex-col gap-3 md:flex-row">
-  <li>Home</li>
-  <li>About</li>
-  <li>Contact</li>
-  <li>Feedback</li>
-</ul>
-      {/* <SearchItem /> */}
+      <ul className="flex flex-col items-center gap-3 md:flex-row md:gap-6">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Feedback</li>
+      </ul>
     </>
   );
 }
@@ -23,25 +21,26 @@ export default function Navitem() {
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
-    console.log("clicked");
   };
 
   return (
     <>
-    <div className="flex">
-      <div className="w-1/3 flex items-center justify-between">
-        <div className="hidden md:flex">
-          <Navlinks />
-        </div>
-        <div className="md:hidden">
-          <button onClick={toggleNavbar}>{isOpen ? <X /> : <Menu />}</button>
-        </div>
+      <div className="md:hidden flex items-center">
+        <button onClick={toggleNavbar} className="text-3xl">
+          {isOpen ? <X /> : <Menu />}
+        </button>
       </div>
-      {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col items-center">
-          <Navlinks />
+      <div
+        className={`fixed inset-0 flex flex-col items-center justify-center bg-white z-10 transition-transform duration-300 md:relative md:flex md:items-center md:justify-start ${
+          isOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
+        }`}
+      >
+        <div className="absolute top-4 right-4 md:hidden">
+          <button onClick={toggleNavbar} className="text-3xl">
+            <X />
+          </button>
         </div>
-      )}
+        <Navlinks />
       </div>
     </>
   );
