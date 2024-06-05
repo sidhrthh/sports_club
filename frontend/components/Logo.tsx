@@ -1,7 +1,8 @@
 export default function Logo() {
     return (
         <>
-            <p>Sports Club</p>
-        </>
+            <h1 className="text-3xl font-bold text-gray-500 ">
+                Sports<span className="text-black">_Club</span>
+            </h1>        </>
     )
 }
