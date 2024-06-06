@@ -7,10 +7,10 @@ function Navlinks() {
   return (
     <>
       <ul className="flex flex-col items-center gap-3 md:flex-row md:gap-6">
-        <li> <a href="">Home</a></li>
-        <li> <a href="">About</a></li>
-        <li> <a href="">Contact</a></li>
-        <li> <a href="">Feedback</a></li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Feedback</li>
       </ul>
     </>
   );
