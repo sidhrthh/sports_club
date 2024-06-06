@@ -7,7 +7,7 @@ import SearchItem from "./SearchItem";
 export default function Navbar() {
     return (
         <>
-            <div className="sticky top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between border-b border-gray-100 bg-background p-[2em] text-text-primary ">
+            <div className="top-0 z-[1] mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between border-b border-gray-100 bg-background p-[2em] text-text-primary ">
                 {/* logo */}
                 <div>
                     <Logo />
