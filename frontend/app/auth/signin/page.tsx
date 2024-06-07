@@ -1,7 +1,7 @@
-import Button from "@/components/Button";
+import { LogButton } from "@/components/Button"
 import { Input } from "@/components/ui/input";
 
-export default function Signup() {
+export default function signin() {
     return (
         <div className="md:flex md:justify-around md:px-20">
             {/* Image */}
@@ -16,13 +16,15 @@ export default function Signup() {
 
             {/* Form */}
             <div className="md:w-1/2 p-5 md:mt-10">
-                <h2 className="text-4xl font-semibold">Create an account</h2>
+                <h2 className="text-4xl font-semibold">Log in to Exclusive</h2>
                 <p className="text-xl font-medium mt-4 mb-8">Enter your details below</p>
                 <form className="space-y-6">
-                    <Input type="text" placeholder="Name" className="w-full" />
                     <Input type="email" placeholder="Email or Number" className="w-full" />
                     <Input type="password" placeholder="Password" className="w-full" />
-                    <Button text="Create account" />
+                    <div className="flex justify-between mt-5">
+                    <LogButton text={"Log in"} />
+                    <p>Format password?</p>
+                    </div>
                 </form>
             </div>
         </div>
