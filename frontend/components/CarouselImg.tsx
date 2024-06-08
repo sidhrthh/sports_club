@@ -2,6 +2,11 @@
 import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import Image from 'next/image'
+import cricket from "../public/cricket.jpg"
+import football from "../public/football.jpg"
+import basketball from "../public/basketball.jpg"
+
 
 export default function CarouselImg() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3500 })])
@@ -19,13 +24,13 @@ export default function CarouselImg() {
       <div className="embla__viewport " ref={emblaRef}>
         <div className="embla__container ">
           <div className="embla__slide w-9/12	">
-          <img  src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Description of Image 1" />
+          <Image src={cricket} alt='Cricket_offer'/>
           </div>
           <div className="embla__slide w-9/12	 ">
-            <img src="https://images.pexels.com/photos/598656/pexels-photo-598656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="imagw-2" />
+          <Image src={football} alt='football_offer' />
           </div>
           <div className="embla__slide w-9/12	">
-            <img src="https://images.pexels.com/photos/67870/lacrosse-air-force-ohio-state-game-67870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="image-3" />
+          <Image src={basketball} alt='Basketball_offer' />
           </div>
         </div>
       </div>
