@@ -23,7 +23,7 @@ export default function signin() {
                     <Input type="password" placeholder="Password" className="w-full" />
                     <div className="flex justify-between mt-5">
                     <LogButton text={"Log in"} />
-                    <p>Format password?</p>
+                   <a href="#"><p className="text-red-400">Format password?</p></a> 
                     </div>
                 </form>
             </div>

@@ -1,5 +1,4 @@
 import Logo from "./Logo"
-import { Input } from "./ui/input"
 import Image from "next/image"
 import  Qrcode  from "../public/Qrcode.jpg"
 import Appstore from "../public/appstore.jpg"
