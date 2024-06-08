@@ -8,16 +8,16 @@ import { SocialIcon } from 'react-social-icons'
 export default function Footer() {
     return(
         <>
-        <div className="flex justify-between bg-black text-white md:p-10">
+        <div className="flex flex-col md:flex-row justify-between bg-black text-white md:p-10">
         {/*  */}
-        <div>
+        <div className="text-center p-5">
             <Logo />
             <p className="mt-3">Subscribe</p>
             <p className="mt-2 mb-2">Get 20% off your first order</p>
-            <div className="p-2 flex border-2">
+            <div className="ml-[3rem] md:ml-0 p-2 flex border-2 w-4/5 md:w-full">
                 <input
                     type="text"
-                    className="bg-transparent focus:outline-none "
+                    className="bg-transparent focus:outline-none"
                     placeholder="Enter your email "
                 />
                 <button>
@@ -29,12 +29,12 @@ export default function Footer() {
             </div>
         </div>
         {/*  */}
-        <div className="flex justify-between w-2/4	">
-            <div>
+        <div className="flex justify-between p-3 mt-3">
+            <div className="w-2/5">
                 <h2 className="mb-4">Support</h2>
                 <p>111 Sarojini Nagar, Delhi, lndia.</p>
                 <p>Sportclub@gmail.com</p>
-                <p>+88015-88888-9999</p>
+                <p>88015-88888-9999</p>
             </div>
 
             <div>
@@ -56,10 +56,10 @@ export default function Footer() {
 
         </div>
         {/*  */}
-        <div>
+        <div className="text-center">
             <h2 className="mb-4">Download App</h2>
             <p>Save $3 with App New User Only</p>
-            <div className="flex justify-around m-2">
+            <div className="flex justify-around m-2 px-[6.5rem]">
                 <div >
                 <Image src={Qrcode} alt="Qrcode"/>
                 </div>
