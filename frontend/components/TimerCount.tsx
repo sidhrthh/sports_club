@@ -22,7 +22,7 @@ const TimerCount = () => {
   };
 
   return (
-   <p>{formatTime(timeLeft)}</p>
+   <p className='font-bold ml-10'>{formatTime(timeLeft)}</p>
   );
 };
 
