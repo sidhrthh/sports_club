@@ -10,9 +10,9 @@ interface ExperienceProps {
 export default function ExperienceCards({ img, title, text }: ExperienceProps) {
     return (
         <>
-            <div className="border-2 border-grey-100 rounded w-1/5 p-5 text-center">
+            <div className="md:w-1/5 p-3 text-center">
                 <h2 >
-                    <p className="ml-14">
+                    <p className="ml-[6.3rem]">
                         {img}
                     </p>
                 </h2>
